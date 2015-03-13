@@ -24,19 +24,22 @@ class rbm_helpful_evaluation_links {
 	}
 
 	/**
-	 * box
+	 * Adds the new meta box
 	 */
 	public function box() {
 		add_meta_box(
 			'helpful_links'
 			, __( 'Helpful links', 'rbmhl' )
 			, array( $this, 'content' )
-			, 'post'
+			, 'evaluations'
 			, 'side'
 			, 'high'
 		);
 	}
 
+	/**
+	 * Outputs the contents of the new meta box
+	 */
 	public function content() {
 		$links = array(
 			'The problem with sliders'                            => 'http://searchengineland.com/homepage-sliders-are-bad-for-seo-usability-163496',
@@ -55,6 +58,7 @@ class rbm_helpful_evaluation_links {
 			'Core Caching Concepts'                               => 'https://www.tollmanz.com/core-caching-concepts-in-wordpress/',
 
 		);
+		echo '<em>Simply drag and drop links you like to your content.</em>';
 		foreach ( $links as $title => $link ) {
 			echo '<a href="' . $link . '" target="_BLANK" rel="nofollow">' . $title . '</a><br/>';
 		}

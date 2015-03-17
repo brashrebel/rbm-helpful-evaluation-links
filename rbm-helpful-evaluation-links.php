@@ -56,9 +56,10 @@ class rbm_helpful_evaluation_links {
 			'Basics of website design and accessibility'          => 'http://www.studygs.net/accessibility.htm',
 			'Is the use of text embedded in images bad practice?' => 'http://ux.stackexchange.com/questions/41593/is-the-usage-of-text-embedded-in-an-image-a-bad-practice-for-very-controlled-us',
 			'Core Caching Concepts'                               => 'https://www.tollmanz.com/core-caching-concepts-in-wordpress/',
+			'Why do I need Google Analytics?' => 'http://www.cleart.com/blog/why-do-i-need-google-analytics/',
 
 		);
-		echo '<em>Simply drag and drop links you like to your content.</em>';
+		echo '<em>Simply drag and drop links you like to your content.</em><br/>';
 		foreach ( $links as $title => $link ) {
 			echo '<a href="' . $link . '" target="_BLANK" rel="nofollow">' . $title . '</a><br/>';
 		}
